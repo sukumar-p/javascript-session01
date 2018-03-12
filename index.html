@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table {
+            border: 3px solid yellowgreen;
+            border-collapse: collapse;
+            width: 50%;
+            margin: 35px 0px 0px 0px;
+        }
+
+        th,
+        td {
+            border: 3px solid white;
+            border-collapse: collapse;
+            text-align: center;
+            color: white;
+            width: 33%;
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <input type="text" id="newentry2">
+
+
+    <input type="text" id="newentry3">
+
+    <input type="text" id="newentry4">
+    <br>
+    <br>
+
+    <button id="myButton">click me</button>
+    <table>
+        <tr style="background-color:black;">
+            <th>name</th>
+            <th>age</th>
+            <th>contact</th>
+        </tr>
+        <tr id="userlist2">
+
+        </tr>
+        <tr id="userlist3">
+
+        </tr>
+        <tr id="userlist4">
+
+        </tr>
+    </table>
+    <script>
+        document.getElementById("myButton").onclick = function () {
+            var newUser = document.getElementById("newentry2").value;
+            if (newUser != '') {
+                document.getElementById("userlist2").style.backgroundColor = "red";
+                document.getElementById("userlist2").innerHTML += "<td>" + newUser + "</td>";//(x+=y, x=x+y)
+            }
+            else {
+                alert("entry some sata");
+            }
+            document.getElementById("newentry2").value = '';
+            // }
+            // document.getElementById("myButton").onclick = function () {
+            var newUser = document.getElementById("newentry3").value;
+            if (newUser != '') {
+                document.getElementById("userlist3").style.backgroundColor = "blue";
+                document.getElementById("userlist3").innerHTML += "<td>" + newUser + "</td>";
+            }
+            else {
+                alert("enter some data");
+            }
+            document.getElementById("newentry3").value = '';
+            // }
+            // document.getElementById("myButton").onclick = function () {
+            var newUser = document.getElementById("newentry4").value;
+            if (newUser != '') {
+                document.getElementById("userlist4").style.backgroundColor = "pink";
+                document.getElementById("userlist4").innerHTML += "<td>" + newUser + "</td>";
+            }
+            else {
+                alert("enter some data");
+            }
+            document.getElementById("newentry4").value = '';
+        }
+
+    </script>
+</body>
+
+</html>
